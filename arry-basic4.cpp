@@ -1,18 +1,22 @@
 #include <iostream>
 using namespace std;
-void arrry(int arr[2][2]) {
+
+int arrry(int arr[2][2], int size) {
+	int sum = 0;
 	for (int a = 0; a < 2; a++) {
 		for (int s = 0; s < 2; s++) {
-			cout << arr[a][s] << " ";
-		}
-		cout << endl;
+			sum += arr[a][s] * arr[a][s];
+		}	
 	}
+	return sum;
 }
 int main()
 {
 	int arr[2][2] = {
-		{2,3},
-		{5,6}
+		{3,5 },
+		{4,5}
 	};
-	arrry(arr);
+	int size = 5;
+	int result = arrry(arr,size);
+		cout << " the sum is " << result << endl;	
 }
